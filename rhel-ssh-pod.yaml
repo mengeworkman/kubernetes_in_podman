@@ -10,7 +10,7 @@ spec:
       args:
         - -c
         - |
-          dnf install -y openssh-server python3 screen && \
+          dnf install -y openssh-server python3 && \
           ssh-keygen -A && \
           sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
           echo "root:Asdf_123" | chpasswd && \
